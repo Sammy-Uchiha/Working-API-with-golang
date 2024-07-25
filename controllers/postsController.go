@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"net/http"
+
 	"github.com/gin-gonic/gin"
 	"github.com/testgo/go-sammy/initializers"
 	"github.com/testgo/go-sammy/models"
@@ -89,4 +91,11 @@ func PostDelete(c *gin.Context) {
 
 	// Respond
 	c.Status(200)
+}
+
+func PostsStartPage(c *gin.Context) {
+
+	c.JSON(http.StatusOK, gin.H{
+		"post": "Healthy",
+	})
 }

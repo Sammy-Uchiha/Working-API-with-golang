@@ -19,6 +19,7 @@ func main() {
 	r.GET("/posts", controllers.PostsIndex)
 	r.GET("/posts/:id", controllers.PostsShow)
 	r.DELETE("/posts/:id", controllers.PostDelete)
+	r.GET("/", controllers.PostsStartPage)
 
 	r.Run()
 }
